@@ -24,3 +24,5 @@ gem "slim"
 gem "slim-rails"
 # provides a simple and extremely flexible way to upload files
 gem 'carrierwave'
+# heroku server
+gem 'heroku'
