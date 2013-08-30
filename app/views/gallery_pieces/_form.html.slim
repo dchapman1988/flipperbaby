@@ -1,0 +1,24 @@
+= form_for @gallery_piece do |f|
+  - if @gallery_piece.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@gallery_piece.errors.count, "error")} prohibited this gallery_piece from being saved:"
+      ul
+        - @gallery_piece.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :type
+    = f.text_field :type
+  .field
+    = f.label :size
+    = f.text_field :size
+  .field
+    = f.label :materials
+    = f.text_field :materials
+  .field
+    = f.label :gallery_id
+    = f.text_field :gallery_id
+  .actions = f.submit 'Save'

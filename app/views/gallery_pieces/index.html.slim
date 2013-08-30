@@ -1,0 +1,27 @@
+h1 Listing gallery_pieces
+
+table
+  tr
+    th Title
+    th Type
+    th Size
+    th Materials
+    th Gallery
+    th
+    th
+    th
+
+  - @gallery_pieces.each do |gallery_piece|
+    tr
+      td = gallery_piece.title
+      td = gallery_piece.type
+      td = gallery_piece.size
+      td = gallery_piece.materials
+      td = gallery_piece.gallery_id
+      td = link_to 'Show', gallery_piece
+      td = link_to 'Edit', edit_gallery_piece_path(gallery_piece)
+      td = link_to 'Destroy', gallery_piece, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Gallery piece', new_gallery_piece_path

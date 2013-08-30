@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @gallery_piece.title
+p
+  strong Type:
+  = @gallery_piece.type
+p
+  strong Size:
+  = @gallery_piece.size
+p
+  strong Materials:
+  = @gallery_piece.materials
+p
+  strong Gallery:
+  = @gallery_piece.gallery_id
+
+= link_to 'Edit', edit_gallery_piece_path(@gallery_piece)
+'|
+= link_to 'Back', gallery_pieces_path
